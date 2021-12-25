@@ -56,9 +56,9 @@ module.exports.authenticate = (params) => {
             return jwt.verify(token, signingKey, jwtOptions);
         })
         .then((decoded)=> ({
-            principalId: decoded.sub,
+            principalId: decoded.sub == null || decoded.sub === "" ? decoded.client_id : decoded.sub,
             policyDocument: getPolicyDocument('Allow', params.methodArn),
-            context: { scope: decoded.scope }
+            // context: { scope: decoded.scope }
         }));
 }
 
