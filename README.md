@@ -1,6 +1,6 @@
 # AWS API Gateway Custom Authorizer for RS256 JWTs
 
-** WARNING: This project is deprecated and no longer maintained!!*
+** WARNING: This project is deprecated and no longer maintained!!**
 
 An AWS API Gateway [Custom Authorizer](http://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html) that authorizes API requests by requiring
 that the OAuth2 [bearer token](https://tools.ietf.org/html/rfc6750) is a JWT that can be validated using the RS256 (asymmetric) algorithm with a public key that is obtained from a [JWKS](https://tools.ietf.org/html/rfc7517) endpoint.
